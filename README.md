@@ -1,4 +1,4 @@
-# Neural converter v1.0.0
+# Neural converter v1.0.1
 🧠 The Neural converter is implemented in C programming language. The application is designed to transform scores in 5- and 12-point grading systems using a single neuron. 🧠
 
 ## ⚠️ LICENSE ⚠️
@@ -28,10 +28,10 @@ SOFTWARE.
 
 1) ⚠️ **The application is designed for Linux, so avoid using other systems or remake the program to avoid bugs.** ⚠️
 2) 🗂️ Download *all* files and put them in a one directory.
-3) ⚒️ Compile the program with *clang++* or *g++*, whether you like.
+3) ⚒️ Compile the program with *clang* or *gcc*, whether you like.
     - Сompilation example
     ```
-    clang++ -o main main.c neuron.c
+    clang -o main main.c neuron.c
     ```
 4) 💥 Then, in your directory will appear file *"main"*.
     - If you want to check files in current directory
