@@ -23,24 +23,24 @@ SOFTWARE.
 */
 
 #include <stdio.h>
-// #define test //uncomment to see the neuron training process
+/*#define test*/ /*uncomment to see the neuron training process*/
 
-//Neuron struct
+/*Neuron struct*/
 struct Neuron
 {
-    double weight;      //variable to set the weight value
-    double last_error;  //variable to collect the error value
-    double smoothing;   //variable to set the smoothing value
+    double weight;      /*variable to set the weight value*/
+    double last_error;  /*variable to collect the error value*/
+    double smoothing;   /*variable to set the smoothing value*/
 };
 
-//menu function
+/*menu function*/
 void menu();
 
-//function for calculating the result
+/*function for calculating the result*/
 double program_input(double input, struct Neuron *neuron);
 
-//function for calculating the result by reverse algorithm
+/*function for calculating the result by reverse algorithm*/
 double restore_input(double output, struct Neuron *neuron);
 
-//function for neuron training
+/*function for neuron training*/
 void train_neuron(double input, double expected_result, struct Neuron *neuron);

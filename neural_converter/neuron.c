@@ -24,25 +24,25 @@ SOFTWARE.
 
 #include "neuron.h"
 
-//menu function
+/*menu function*/
 void menu()
 {
     printf("Choose an option:\n1) Convert your score from a twelve-point scale to a five-point scale\n2) Convert your score from a five-point scale to a twelve-point scale\n3) Info about the creator and license\n0) Stop the program\n");
 }
 
-//function for calculating the result
+/*function for calculating the result*/
 double program_input(double input, struct Neuron *neuron)
 {
     return input * neuron->weight;
 }
 
-//function for calculating the result by reverse algorithm
+/*function for calculating the result by reverse algorithm*/
 double restore_input(double output, struct Neuron *neuron)
 {
     return output / neuron->weight;
 }
 
-//function for neuron training
+/*function for neuron training*/
 void train_neuron(double input, double expected_result, struct Neuron *neuron)
 {
     double result = input * neuron->weight;

@@ -26,19 +26,19 @@ SOFTWARE.
 
 int main()
 {
-    //necessary values ​​for the training of neurons
+    /*necessary values ​​for the training of neurons*/
     double highest_score_on_a_twelve_point_system = 12.0;
     double highest_score_on_a_five_point_system = 5.0;
 
-    //delimiter for menu
+    /*delimiter for menu*/
     char single_delimiter[] = "--------------------------------------------------------------------\n";
 
-    //setting neuron weight and smoothing
+    /*setting neuron weight and smoothing*/
     struct Neuron neuron;
     neuron.weight = 0.50;
     neuron.smoothing = 0.01;
 
-    //the process of training neurons
+    /*the process of training neurons*/
     int i = 0;
     do
     {
@@ -54,11 +54,11 @@ int main()
     
     printf("\nNeuron training is complete\n\n");
 
-    //outputting the example
+    /*outputting the example*/
     printf("An example of converting estimates from one system to another: \n");
     printf("%.1lf = %.1lf\n\n", highest_score_on_a_twelve_point_system, program_input(highest_score_on_a_twelve_point_system, &neuron));
 
-    //menu
+    /*menu*/
     int choise = 1;
     double value;
     int scanning_value = 0;
@@ -71,7 +71,7 @@ int main()
         printf("Your choise: ");
         scanning_value = scanf("%i", &choise);
 
-        //checking the correctness of the input
+        /*checking the correctness of the input*/
         if(scanning_value == 1)
         {
             printf("%s", single_delimiter);
@@ -83,12 +83,12 @@ int main()
                 printf("Enter a value: ");
                 scanning_value = scanf("%lf", &value);
 
-                //checking the correctness of the input
+                /*checking the correctness of the input*/
                 if(scanning_value == 1)
                 {
                     printf("%s", single_delimiter);
                     
-                    //outputting the result
+                    /*outputting the result*/
                     printf("%.1lf = %.1lf\n", value, program_input(value, &neuron));
                 }
                 else
@@ -103,12 +103,12 @@ int main()
                 printf("Enter a value: ");
                 scanning_value = scanf("%lf", &value);
 
-                //checking the correctness of the input
+                /*checking the correctness of the input*/
                 if(scanning_value == 1)
                 {
                     printf("%s", single_delimiter);
 
-                    //outputting the result
+                    /*outputting the result*/
                     printf("%.1lf = %.1lf\n", value, restore_input(value, &neuron));
                 }
                 else
